@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+  <!-- Tailwind + Daisy CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Titlle -->\
+  <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+  <title>Sing Up</title>
+</head>
+
+<body>
+
+  <section>
+    <div class="w-[520px] mx-auto bg-white shadow-md mt-52 rounded-sm p-10">
+      <div class="text-center space-y-3">
+        <img class="mx-auto" src="./assets/github-logo.png" alt="">
+        <h2 class="text-2xl font-bold">GitHub Issues Tracker</h2>
+        <p class="text-[20px] text-gray-400">Sign in to manage your issues</p>
+      </div>
+      <div class=" mx-auto space-y-3 mt-5">
+        <label class="block text-xl font-semibold">Username</label>
+        <input id="singupUserName" class="p-3 w-full border-gray-400 rounded-md" type="text"
+          placeholder="Enter : Username">
+
+        <label class="block text-xl font-semibold">Password</label>
+        <input id="singupUserPass" class="w-full p-3 border-gray-400 rounded-md" type="password" maxlength="10"
+          placeholder="Enter : Password">
+      </div>
+      <button id="btn-singup" class="mt-5 btn btn-primary w-full text-[18px]">Sing Up</button>
+      <!--  -->
+    
+      <div class="flex items-center my-5">
+      
+        <div class="flex-grow border-t border-gray-300"></div>
+        <span class="mx-4 text-gray-500 font-medium">OR</span>
+        <div class="flex-grow border-t border-gray-300"></div>
+      </div>
+      
+        
+      <p class="text-center text-gray-400">Demo credentials:</p>
+      <div class="bg-gray-100 p-5 rounded-md">
+    <div class="flex justify-center mb-3">
+      <h2 class="font-semibold">Username :</h2>
+      <span class="ml-1">admin</span>
+    </div>
+    
+    <div class="flex justify-center">
+      <h2 class="font-semibold">Password :</h2>
+      <span class="ml-1">admin123</span>
+    </div>
+      </div>
+  
+
+    </div>
+
+ 
+  </section>
+
+  <script src="./Scrip-file/singup.js"></script>
+</body>
+
+</html>
