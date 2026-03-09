@@ -52,11 +52,11 @@ const displayIssues = issues => {
       priorityClass = 'text-green-600 bg-green-200';
       borderClass = 'border-t-4 border-green-500';
     } else if (issue.priority.toLowerCase() === 'low') {
-      priorityClass = 'text-purple-600 bg-purple-200';
+      priorityClass = 'text-purple-500 bg-purple-200';
       borderClass = 'border-t-4 border-purple-500';
     } else {
-      priorityClass = 'text-red-500 bg-red-200';
-      borderClass = 'border-t-4 border-red-500';
+         priorityClass = 'text-red-500 bg-red-200';
+         borderClass = 'border-t-4 border-red-500';
     }
 
     const card = document.createElement('div');
