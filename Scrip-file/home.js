@@ -10,7 +10,7 @@ const loadIssuesCard = () => {
     });
 };
 
-
+const searchInput = document.getElementById('search-input');
 const mainBtn = document.getElementById('mainBtnContainer');
 
 const toggleBtn = id => {
@@ -141,5 +141,13 @@ const openModal = issue => {
 
   document.getElementById('my_modal_1').showModal();
 };
+
+searchInput.addEventListener('input', () => {
+  const value = searchInput.value.toLowerCase()
+  const filtered = allIssues.filter((issue) =>
+    issue.title.toLowerCase().includes(value),
+  ) 
+  displayIssues(filtered)
+})
 
 loadIssuesCard();
