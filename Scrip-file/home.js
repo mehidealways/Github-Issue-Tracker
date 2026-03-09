@@ -10,7 +10,7 @@ const loadIssuesCard = () => {
     });
 };
 
-// Button Filter
+
 const mainBtn = document.getElementById('mainBtnContainer');
 
 const toggleBtn = id => {
@@ -90,7 +90,7 @@ const displayIssues = issues => {
         </div>
       </div>
 
-      <hr class="my-3">
+      <hr class="my-3 border-gray-300">
 
       <div class="flex justify-between text-gray-500">
         <p>#${issue.id} by ${issue.assignee}</p>
