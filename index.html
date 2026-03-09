@@ -4,70 +4,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
-  <!-- Tailwind + Daisy CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+  <link rel="shortcut icon" href="./assets/github-logo.png">
+
+  <!-- Tailwind + DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <!-- Titlle -->\
-  <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
-  <title>Home</title>
+
+  <title>All Issues</title>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="navbar bg-base-100 shadow-sm px-10">
+
       <div class="flex items-center flex-1">
-        <img class="w-[40px]" src="./assets/github-logo.png" alt="">
+        <img class="w-[40px]" src="./assets/github-logo.png">
         <a class="btn btn-ghost text-xl font-bold">ALL ISSUES</a>
       </div>
 
-      <!-- Search Feld -->
       <div class="flex gap-2">
         <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
         <button class="btn btn-primary">Search</button>
       </div>
+
     </div>
   </header>
-  <!-- Select all Section -->
-  <section class="  w-11/12 mx-auto">
-  <div id="mainBtnContainer" class="mt-20 border border-gray-100 p-5 shadow-sm flex gap-2">
-    <button onclick="toggleBtn(id)" id="all-btn" class="btn btn-primary">All</button>
-    <button onclick="toggleBtn(id)" id="open-btn" class="btn">Open</button>
-    <button onclick="toggleBtn(id)" id="close-btn" class=" btn">Close</button>
-  </div>
+
+
+  <!-- FILTER BUTTONS -->
+  <section class="w-11/12 mx-auto">
+
+    <div id="mainBtnContainer" class="mt-20 border border-gray-100 p-5 shadow-sm flex gap-2">
+
+      <button onclick="toggleBtn('all-btn')" id="all-btn" class="btn btn-primary">
+        All
+      </button>
+
+      <button onclick="toggleBtn('open-btn')" id="open-btn" class="btn">
+        Open
+      </button>
+
+      <button onclick="toggleBtn('close-btn')" id="close-btn" class="btn">
+        Close
+      </button>
+
+    </div>
+
   </section>
 
-  <section class="w-11/12 mx-auto  mt-10">
+
+  <!-- ISSUE HEADER -->
+  <section class="w-11/12 mx-auto mt-10">
+
     <div class="border border-gray-100 p-5 shadow flex justify-between">
+
       <div class="flex items-center">
+
         <div class="mr-5">
-          <img class="w-[40px]" src="./assets/Aperture.png" alt="">
+          <img class="w-[40px]" src="./assets/Aperture.png">
         </div>
-        <div class="">
-          <h3   class="text-[20px] font-semibold"><span id="issueCount">0</span> Issues</h3>
-          <p class="text-gray-400">Track and manage your project issues</p>
+
+        <div>
+          <h3 class="text-[20px] font-semibold">
+            <span id="issueCount">0</span> Issues
+          </h3>
+
+          <p class="text-gray-400">
+            Track and manage your project issues
+          </p>
         </div>
 
       </div>
+
       <div class="flex gap-5 items-center">
         <p class="text-gray-400">Open</p>
         <p class="text-gray-400">Close</p>
       </div>
+
     </div>
 
   </section>
 
-  <section id="loadContainerCard" class="w-11/12 mx-auto">
-    <div id="cardContainer" class="p-5 mt-20">
 
-    </div>
+  <!-- CARD CONTAINER -->
+  <section class="w-11/12 mx-auto">
+
+    <div id="cardContainer" class="p-5 mt-20"></div>
+
   </section>
 
 
- 
+  <!-- MODAL -->
+  <dialog id="my_modal_1" class="modal">
+
+    <div class="modal-box">
+
+      <div class="space-y-5">
+
+        <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+
+        <div class="flex items-center gap-2">
+
+          <button id="modalStatus" class="py-1 px-4 rounded-full text-white bg-green-700 border-none">
+          </button>
+
+          <p id="modalShort"></p>
+
+          <p id="modalDate"></p>
+
+        </div>
+
+
+        <div>
+          <button id="modalLabel" class="py-1 px-4 rounded-full text-[#EF4444] border bg-[#FEECEC] font-semibold">
+          </button>
+        </div>
+
+
+        <p id="modalDescription" class="text-[18px] text-gray-400"></p>
+
+
+        <div class="bg-gray-100 p-3 flex justify-around items-center rounded-md">
+
+          <div>
+            <p>Assignee :</p>
+            <h3 id="modalAssignee" class="font-bold"></h3>
+          </div>
+
+          <div>
+            <p>Priority:</p>
+
+            <button id="modalPriority" class="px-4 py-2 rounded-full font-semibold">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-action">
+
+        <form method="dialog">
+          <button class="btn btn-primary">Close</button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </dialog>
+
 
   <script src="./Scrip-file/home.js"></script>
+
 </body>
 
 </html>
